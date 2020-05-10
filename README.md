@@ -2,6 +2,7 @@
 
 - [Semaine n°1 : du 6 au 12 avril](#semaine1)  
 - [Semaine n°2 : du 13 au 19 avril](#semaine2)  
+- [Semaine n°3 : du 4 au 10 mai](#semaine3) 
 - [Glossaire](#glossaire)
 
 -------------
@@ -53,13 +54,15 @@ Aucune
 ### Remarques diverses
 Aucune
 
+-------------
+
 ## Semaine n°2 : du 13 avril au 19 avril <a id="semaine2"></a>
 
 ### Sprints et fonctionnalités réalisées 
 
 #### Fonctionnalité n°2 : Dimensionner le vaisseau (fini)
 
-- Story n°1 : Pouvor dimmensionner le vaisseau
+- Story n°1 : Pouvor dimensionner le vaisseau
 Un vaisseau possédant une longueur et une hauteur données est créé.
 
 - Story n°2 : Faire en sorte qu'il soit impossible de positionner un nouveau vaisseau qui déborde de l'espace de jeu
@@ -76,17 +79,57 @@ Aucune
 
 ### Diagramme de classes 
 
-![Diagrammes de classes de la semaine 1](ImagesSpace/F2.PNG)
+![Diagrammes de classes de la semaine 2](ImagesSpace/F2.PNG)
 
 ### Nuage de mots du projet spaceinvaders (séance n°2) 
 
-![Nuage de mots de la semaine 2](ImagesSpace/nuageF2.PNG)
+![Nuage de mots de la semaine 2](ImagesSpace/nuageF2.png)
 
 ### Difficultés rencontrées
 Aucune
 
 ### Remarques diverses
 Aucune
+
+-------------
+
+## Semaine n°3 : du 4 mai au 10 mai <a id="semaine3"></a>
+
+### Sprints et fonctionnalités réalisées 
+
+#### Fonctionnalité n°3 : Choisir la vitesse du vaisseau (fini)
+
+- Story n°1 : Comprendre ce qu'est la vitesse dans notre application et faire un choix de conception
+Ajout de la définition de la vitesse au glossaire.
+
+- Story n°2 : Ajouter la vitesse au Vaisseau sans régression de comportement
+Implémentation d'un attribut vitesse dans la classe Vaisseau. Refactoring des méthodes de la classe pour implémenter la vitesse.
+
+- Story n°3 : Régler la vitesse du vaisseau
+Création d'un nouveau constructeur en surcharge de la classe Vaisseau qui a la signature : Vaisseau(Dimension, Position, int).
+
+- Story n°4 : Faire en sorte que le déplacement se fasse correctement pour une vitesse quelconque
+Refactoring de la méthode positionnerUnNouveauVaisseau de la classe SpaceInvaders pour ajouter la vitesse à sa signature. refactoring de la classe SpaceInvadersTest pour inclure la vitesse dans tous les tests.
+
+
+### Fonctionnalité en cours d’implémentation : 
+Aucune
+
+### Diagramme de classes 
+
+![Diagrammes de classes de la semaine 3](ImagesSpace/F3.PNG)
+
+### Nuage de mots du projet spaceinvaders (séance n°3) 
+
+![Nuage de mots de la semaine 3](ImagesSpace/nuageF3.png)
+
+### Difficultés rencontrées
+Aucune
+
+### Remarques diverses
+Aucune
+
+-------------
 
 ## Glossaire <a id="glossaire"></a>
 
@@ -99,5 +142,7 @@ Aucune
 - Dimension : caractéristique du vaisseau qui défini sa taille en 2D grâce à une longueur et une hauteur.
 
 - Position : caractéristique du vaisseau qui défini sa position en 2D grâce à une abscisse et une ordonnée.
+
+- Vitesse : Grandeur physique associée aux différents sprites. Elle correspond à la distance parcourue au cours d'un déplacement.
 
 
