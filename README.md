@@ -121,7 +121,7 @@ Aucune
 
 ### Nuage de mots du projet spaceinvaders (séance n°3) 
 
-![Nuage de mots de la semaine 3](ImagesSpace/nuageF3.png)
+![Nuage de mots de la semaine 3](ImagesSpace/nuageF3.PNG)
 
 ### Difficultés rencontrées
 Aucune
