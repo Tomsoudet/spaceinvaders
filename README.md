@@ -3,6 +3,7 @@
 - [Semaine n°1 : du 6 au 12 avril](#semaine1)  
 - [Semaine n°2 : du 13 au 19 avril](#semaine2)  
 - [Semaine n°3 : du 4 au 10 mai](#semaine3) 
+- [Semaine n°4 : du 11 au 17 mai](#semaine4)
 - [Glossaire](#glossaire)
 
 -------------
@@ -122,6 +123,43 @@ Aucune
 ### Nuage de mots du projet spaceinvaders (séance n°3) 
 
 ![Nuage de mots de la semaine 3](ImagesSpace/nuageF3.PNG)
+
+### Difficultés rencontrées
+Aucune
+
+### Remarques diverses
+Aucune
+
+-------------
+
+## Semaine n°4 : du 11 mai au 17 mai <a id="semaine4"></a>
+
+### Sprints et fonctionnalités réalisées 
+
+#### Fonctionnalité n°4 : Tirer un missile depuis le vaisseau (fini)
+
+- Story n°1 : Définir ce qu'est un missile : création de la superclasse "Sprite" pour gérer le comportement du missile et du vaisseau
+
+- Story n°2 : Tirer un missile
+Lorsqu'on tire un missile, on crée et on positionne un nouveau missile devant le vaisseau, au centre de celui-ci. On s'assure que les dimensions du missile sont cohérente avec celles du vaisseau : pas plus grandes que lui.
+
+- Story n°3 : Faire déplacer le missile à la verticale de manière autonome
+Une fois tiré le missile doit se déplacer automatiquement vers le haut de l'écran à une vitesse donnée.
+
+- Story n°4 : Le Missile doit disparaître du jeu lors qu'il atteint le haut de l'espace jeu
+Une fois que le missile est au moins partiellement sorti de l'écran, il doit disparaitre afin de permettre d'en tirer un nouveau
+
+
+### Fonctionnalité en cours d’implémentation : 
+Aucune
+
+### Diagramme de classes 
+
+![Diagrammes de classes de la semaine 4](ImagesSpace/F4.PNG)
+
+### Nuage de mots du projet spaceinvaders (séance n°4) 
+
+![Nuage de mots de la semaine 4](ImagesSpace/nuageF4.PNG)
 
 ### Difficultés rencontrées
 Aucune
