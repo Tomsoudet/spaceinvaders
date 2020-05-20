@@ -6,6 +6,9 @@ import static org.junit.Assert.fail;
 import org.junit.Test;
 import org.junit.Before;
 
+import fr.unilim.iut.spaceinvaders.model.Dimension;
+import fr.unilim.iut.spaceinvaders.model.Position;
+import fr.unilim.iut.spaceinvaders.model.SpaceInvaders;
 import fr.unilim.iut.spaceinvaders.utils.DebordementEspaceJeuException;
 import fr.unilim.iut.spaceinvaders.utils.HorsEspaceJeuException;
 import fr.unilim.iut.spaceinvaders.utils.MissileException;
@@ -131,7 +134,7 @@ import fr.unilim.iut.spaceinvaders.utils.MissileException;
 		public void test_VaisseauImmobile_DeplacerVaisseauVersLaDroite() {
 			
 			spaceinvaders.positionnerUnNouveauVaisseau(new Dimension(3,2),new Position(12,9), 3); 
-			spaceinvaders.deplacerVaisseauVersLaDroite();
+			spaceinvaders.deplacerSpriteVersLaDroite(spaceinvaders.recupererVaisseau());
 			assertEquals("" + 
 			"...............\n" + 
 			"...............\n" +
@@ -149,7 +152,7 @@ import fr.unilim.iut.spaceinvaders.utils.MissileException;
 	    public void test_VaisseauAvance_DeplacerVaisseauVersLaGauche() {
 
 	       spaceinvaders.positionnerUnNouveauVaisseau(new Dimension(3,2),new Position(7,9), 3);
-	       spaceinvaders.deplacerVaisseauVersLaGauche();
+	       spaceinvaders.deplacerSpriteVersLaGauche(spaceinvaders.recupererVaisseau());
 
 	       assertEquals("" + 
 	       "...............\n" + 
@@ -168,7 +171,7 @@ import fr.unilim.iut.spaceinvaders.utils.MissileException;
 	    public void test_VaisseauImmobile_DeplacerVaisseauVersLaGauche() {
 
 		   spaceinvaders.positionnerUnNouveauVaisseau(new Dimension(3,2),new Position(0,9), 3);
-	       spaceinvaders.deplacerVaisseauVersLaGauche();
+	       spaceinvaders.deplacerSpriteVersLaGauche(spaceinvaders.recupererVaisseau());
 
 	       assertEquals("" + 
 	       "...............\n" + 
@@ -187,7 +190,7 @@ import fr.unilim.iut.spaceinvaders.utils.MissileException;
 	   public void test_VaisseauAvance_DeplacerVaisseauVersLaDroite() {
 
 	       spaceinvaders.positionnerUnNouveauVaisseau(new Dimension(3,2),new Position(7,9),3);
-	       spaceinvaders.deplacerVaisseauVersLaDroite();
+	       spaceinvaders.deplacerSpriteVersLaDroite(spaceinvaders.recupererVaisseau());
 	       assertEquals("" + 
 	       "...............\n" + 
 	       "...............\n" +
@@ -205,7 +208,7 @@ import fr.unilim.iut.spaceinvaders.utils.MissileException;
 	    public void test_VaisseauAvancePartiellement_DeplacerVaisseauVersLaDroite() {
 
 	       spaceinvaders.positionnerUnNouveauVaisseau(new Dimension(3,2),new Position(10,9),3);
-	       spaceinvaders.deplacerVaisseauVersLaDroite();
+	       spaceinvaders.deplacerSpriteVersLaDroite(spaceinvaders.recupererVaisseau());
 	       assertEquals("" + 
 	       "...............\n" + 
 	       "...............\n" +
@@ -223,7 +226,7 @@ import fr.unilim.iut.spaceinvaders.utils.MissileException;
 	    public void test_VaisseauAvancePartiellement_DeplacerVaisseauVersLaGauche() {
 
 	       spaceinvaders.positionnerUnNouveauVaisseau(new Dimension(3,2),new Position(1,9), 3);
-	       spaceinvaders.deplacerVaisseauVersLaGauche();
+	       spaceinvaders.deplacerSpriteVersLaGauche(spaceinvaders.recupererVaisseau());
 
 	       assertEquals("" + 
 	       "...............\n" + 
