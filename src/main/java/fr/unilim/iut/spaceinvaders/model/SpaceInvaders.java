@@ -88,7 +88,7 @@ public class SpaceInvaders implements Jeu {
 	    
 	    
 
-	    public void positionnerUnNouveauVaisseau(Dimension dimension, Position position, int vitesse) {
+	    public void Envahisseur(Dimension dimension, Position position, int vitesse) {
 			
 			int x = position.abscisse();
 			int y = position.ordonnee();
@@ -143,11 +143,11 @@ public class SpaceInvaders implements Jeu {
 	      public void initialiserJeu() {
 	  		Position positionVaisseau = new Position(this.longueur/2,this.hauteur-1);
 	  		Dimension dimensionVaisseau = new Dimension(Constante.VAISSEAU_LONGUEUR, Constante.VAISSEAU_HAUTEUR);
-	  		positionnerUnNouveauVaisseau(dimensionVaisseau, positionVaisseau, Constante.VAISSEAU_VITESSE);
+	  		positionnerUnNouveauSprite("vaisseau",dimensionVaisseau, positionVaisseau, Constante.VAISSEAU_VITESSE);
 	  		
 	  		Position positionEnvahisseur = new Position(this.longueur/2,this.hauteur/4);
 	  		Dimension dimensionEnvahisseur = new Dimension(Constante.ENVAHISSEUR_LONGUEUR, Constante.ENVAHISSEUR_HAUTEUR);
-	  		positionnerUnNouveauEnvahisseur(dimensionEnvahisseur, positionEnvahisseur, Constante.ENVAHISSEUR_VITESSE);
+	  		positionnerUnNouveauSprite("envahisseur",dimensionEnvahisseur, positionEnvahisseur, Constante.ENVAHISSEUR_VITESSE);
 	  	 }
 	      
 	      public void tirerUnMissile(Dimension dimensionMissile, int vitesseMissile) {
@@ -171,7 +171,7 @@ public class SpaceInvaders implements Jeu {
 			}
 		}
 		
-		public void positionnerUnNouveauEnvahisseur(Dimension dimension, Position position, int vitesse) {
+		public void positionnerUnNouveauSprite(String sprite,Dimension dimension, Position position, int vitesse) {
 			
 			int x = position.abscisse();
 			int y = position.ordonnee();
@@ -179,15 +179,21 @@ public class SpaceInvaders implements Jeu {
 			if (!estDansEspaceJeu(x, y))
 				throw new HorsEspaceJeuException("La position de l'envahisseur est en dehors de l'espace jeu");
 
-			int longueurEnvahisseur = dimension.longueur();
-			int hauteurEnvahisseur = dimension.hauteur();
+			int longueurSprite = dimension.longueur();
+			int hauteurSprite = dimension.hauteur();
 			
-			if (!estDansEspaceJeu(x + longueurEnvahisseur - 1, y))
+			if (!estDansEspaceJeu(x + longueurSprite - 1, y))
 				throw new DebordementEspaceJeuException("L'envahisseur déborde de l'espace jeu vers la droite à cause de sa longueur");
-			if (!estDansEspaceJeu(x, y - hauteurEnvahisseur + 1))
+			if (!estDansEspaceJeu(x, y - hauteurSprite + 1))
 				throw new DebordementEspaceJeuException("L'envahisseur déborde de l'espace jeu vers le bas à cause de sa hauteur");
 
-			envahisseur = new Envahisseur(dimension,position,vitesse);
+			if (sprite.equals("envahisseur")) {
+				envahisseur = new Envahisseur(dimension,position,vitesse);
+			}
+			if (sprite.equals("vaisseau")) {
+				vaisseau = new Vaisseau(dimension,position,vitesse);
+			}
+			
 		}
 		
 		
