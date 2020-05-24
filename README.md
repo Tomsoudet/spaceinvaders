@@ -4,6 +4,7 @@
 - [Semaine n°2 : du 13 au 19 avril](#semaine2)  
 - [Semaine n°3 : du 4 au 10 mai](#semaine3) 
 - [Semaine n°4 : du 11 au 17 mai](#semaine4)
+- [Semaine n°5 : du 18 au 24 mai](#semaine5)
 - [Glossaire](#glossaire)
 
 -------------
@@ -160,6 +161,41 @@ Aucune
 ### Nuage de mots du projet spaceinvaders (séance n°4) 
 
 ![Nuage de mots de la semaine 4](ImagesSpace/nuageF4.PNG)
+
+### Difficultés rencontrées
+Aucune
+
+### Remarques diverses
+Aucune
+
+-------------
+
+## Semaine n°5 : du 18 mai au 24 mai <a id="semaine5"></a>
+
+### Sprints et fonctionnalités réalisées 
+
+#### Fonctionnalité n°5 : Ajouter un envahisseur dans le jeu (fini)
+
+- Story n°1 : Créer un envahisseur.
+Création de la classe Envahisseur qui hérite de la classe Sprite.
+
+- Story n°2 : Positionner un nouvel envahisseur sur l'espace de jeu.
+Un nouvel envahisseur est créé aux dimensions et a la position donnée.
+
+- Story n°3 : Faire en sorte que l'envahisseur fasse des aller-retours entre la droite et la gauche.
+Implémentation d'une nouvelle méthode void deplacerEnvahisseur() qui vérifie si l'envahisseur se trouve sur un bord ou pas et qui change sa direction si besoin.
+
+
+### Fonctionnalité en cours d’implémentation : 
+Aucune
+
+### Diagramme de classes 
+
+![Diagrammes de classes de la semaine 5](ImagesSpace/F5.PNG)
+
+### Nuage de mots du projet spaceinvaders (séance n°5) 
+
+![Nuage de mots de la semaine 5](ImagesSpace/nuageF5.PNG)
 
 ### Difficultés rencontrées
 Aucune
